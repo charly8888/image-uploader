@@ -84,14 +84,14 @@ async function request(file) {
 </svg>
 <h1 class="text-lg font-medium mb-6">Uploaded Succsesfully!</h1>
 <img
-  src="${response.data.newPath}"
+  src="${import.meta.env.VITE_URL_TO_FETCH_DATA}${response.data.newPath}"
   class="rounded-xl w-96 mb-6"
 />
 <div
   class="w-full bg-gray-200 relative h-9 rounded-lg flex items-center p-2 border-2 border-gray-300"
 >
   <p class="text-xs text-gray-600" id="link">
-  ${response.data.newPath}
+  ${import.meta.env.VITE_URL_TO_FETCH_DATA}${response.data.newPath}
   </p>
   <button
     class="bg-blue-500 text-xs absolute right-1 px-5 py-[6px] rounded-lg text-white"
