@@ -2,19 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="devchallenges.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body class="bg-slate-600">
-    <div id="containerAplication">
-      <form id="form">
-        <input type="file" />
-        <button>send</button>
-      </form>
+  <body class="bg-red-100 justify-center place-items-center flex h-screen">
+    <div
+      id="containerAplication"
+      class="bg-white rounded-xl p-9 text-center shadow-lg"
+    >
+      <h1 class="text-lg mb-3">Upload your image</h1>
+      <p class="text-xs text-gray-400 mb-4">File should be Jpeg, Png...</p>
+      <div
+        id="dropContainer"
+        class="w-80 h-56 border-slate-400 border-2 border-dashed rounded-xl text-center p-9 inline-block mb-4"
+        dropzone="link"
+      >
+        <img src="/image.svg" class="w-28 inline-block mb-9" />
+        <p class="text-xs font-medium text-gray-400">Drag & Drop your image</p>
+      </div>
+      <p class="text-xs font-medium text-gray-400 mb-4">Or</p>
 
-      <button id="pedir" class="bg-lime-500 p-1">Pegir imagen</button>
+      <button
+        class="text-white w-auto relative bg-sky-500 py-2 px-4 rounded-lg font-sans text-xs font-medium"
+        id="buttonUpload"
+      >
+        Choose a file
+      </button>
 
+      <input
+        class="w-full absolute top-0 left-0 hidden"
+        type="file"
+        accept="image/*"
+        id="inputFileBtm"
+      />
     </div>
     <script type="module" src="/main.js"></script>
   </body>
