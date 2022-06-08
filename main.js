@@ -61,7 +61,7 @@ async function request(file) {
       },
       onUploadProgress(e) {
         app.innerHTML = `<p class="text-lg text-left mb-6 font-medium">Uploading...</p>
-        <div class="w-full bg-slate-300 rounded-lg h-2 overflow-hidden">
+        <div class=" w-80 bg-slate-300 rounded-lg h-2 overflow-hidden">
         <div class="bg-blue-500 h-full" style="width: ${
           (e.loaded / file.size) * 100
         }%"></div>
@@ -85,7 +85,7 @@ async function request(file) {
 <h1 class="text-lg font-medium mb-6">Uploaded Succsesfully!</h1>
 <img
   src="${import.meta.env.VITE_URL_TO_FETCH_DATA}${response.data.newPath}"
-  class="rounded-xl w-96 mb-6"
+  class="rounded-xl max-w-xs inline-block mb-6"
 />
 <div
   class="w-full bg-gray-200 relative h-9 rounded-lg flex items-center p-2 border-2 border-gray-300"
